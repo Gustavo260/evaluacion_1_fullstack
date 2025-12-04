@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi primera página</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Vinculamos el CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <!-- Contenedor principal -->
+  <div class="app">
+    <header class="app-header">
+      <h1>Hola, mundo 🌎</h1>
+      <p class="subtitle">Probando HTML + CSS + JS + Flexbox</p>
+    </header>
+
+    <main class="app-main">
+      <!-- Columna izquierda -->
+      <section class="card">
+        <h2>Contador básico</h2>
+        <p id="counter-text">Has hecho clic <span id="counter">0</span> veces.</p>
+        <button id="btn-click" class="btn">Haz clic aquí</button>
+      </section>
+
+      <!-- Columna derecha -->
+      <section class="card">
+        <h2>Cambiar mensaje</h2>
+        <p id="message">Este texto se puede cambiar con JavaScript.</p>
+        <button id="btn-message" class="btn btn-secondary">
+          Cambiar mensaje
+        </button>
+      </section>
+    </main>
+
+    <!-- Sección de imágenes con flex -->
+    <section class="images-section">
+      <div class="image-card">
+        <h2>Imagen 1</h2>
+        <img
+          src="https://cdn.pixabay.com/photo/2024/02/22/05/40/natural-scenery-8589165_1280.jpg"
+          alt="Imagen de ejemplo 1"
+        >
+        <p>Esta es una imagen de prueba para practicar el layout con flex.</p>
+      </div>
+
+      <div class="image-card">
+        <h2>Imagen 2</h2>
+        <img
+          src="https://tse3.mm.bing.net/th/id/OIP.8x7f3Hs1LCZqkXK2I0vEPwHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3"
+          alt="Imagen de ejemplo 2"
+        >
+        <p>En pantallas grandes se ve al lado de la otra; en móvil, una debajo de la otra.</p>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <small>Proyecto de práctica · Creado por Gus</small>
+    </footer>
+  </div>
+
+  <!-- Vinculamos el JS -->
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
