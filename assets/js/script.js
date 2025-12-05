@@ -30,3 +30,21 @@ btnMessage.addEventListener("click", () => {
 
   isOriginal = !isOriginal;
 });
+
+// ...existing code...
+
+// Función para rotar imagen
+let rotacion = 0;
+
+function rotarImagen(boton) {
+    // Obtener la imagen dentro de la misma tarjeta que el botón
+    const card = boton.closest('.card');
+    const imagen = card.querySelector('.card-img-top');
+    
+    // Incrementar rotación en 90 grados
+    rotacion += 90;
+    
+    // Aplicar la transformación
+    imagen.style.transition = 'transform 0.5s ease';
+    imagen.style.transform = `rotate(${rotacion}deg)`;
+}
