@@ -2,14 +2,12 @@
 const btnClick = document.getElementById("btn-click");
 const counterSpan = document.getElementById("counter");
 
-// Variable para guardar el número de clics
+// Número de clics
 let counter = 0;
 
-// Cuando se hace clic en el botón, aumentamos el contador
 btnClick.addEventListener("click", () => {
   counter++;
   counterSpan.textContent = counter;
-
   console.log("Hiciste clic. Contador:", counter);
 });
 
@@ -17,16 +15,18 @@ btnClick.addEventListener("click", () => {
 const btnMessage = document.getElementById("btn-message");
 const messageParagraph = document.getElementById("message");
 
-// Flag para alternar mensajes
+// Flag para alternar estado
 let isOriginal = true;
 
 btnMessage.addEventListener("click", () => {
   if (isOriginal) {
     messageParagraph.textContent = "Mensaje cambiado con JavaScript 😏";
+    messageParagraph.classList.add("cambiado");
   } else {
     messageParagraph.textContent =
       "Este texto se puede cambiar con JavaScript.";
+    messageParagraph.classList.remove("cambiado");
   }
 
-  isOriginal = !isOriginal; // invertimos el estado
+  isOriginal = !isOriginal;
 });

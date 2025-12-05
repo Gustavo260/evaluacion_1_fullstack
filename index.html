@@ -2,64 +2,175 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi primera página</title>
+  <title>Práctica HTML + Bootstrap + JS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Vinculamos el CSS -->
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  >
+
+  <!-- Estilos propios -->
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-  <!-- Contenedor principal -->
-  <div class="app">
-    <header class="app-header">
-      <h1>Hola, mundo 🌎</h1>
-      <p class="subtitle">Probando HTML + CSS + JS + Flexbox</p>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+      <!-- LOGO -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img
+          src="https://via.placeholder.com/40x40.png?text=G"
+          alt="Logo"
+          class="me-2"
+          style="width:40px; height:40px; border-radius:8px;"
+        >
+        <span class="fw-bold">MiSitio</span>
+      </a>
+
+      <!-- Botón hamburguesa -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container py-4 main-wrapper">
+
+    <!-- HEADER -->
+    <header class="text-center mb-4">
+      <h1 class="mb-2">Práctica con Bootstrap y JavaScript</h1>
+      <p class="text-muted mb-0">
+        Contador, cambio de texto e imágenes responsive
+      </p>
     </header>
 
-    <main class="app-main">
-      <!-- Columna izquierda -->
-      <section class="card">
-        <h2>Contador básico</h2>
-        <p id="counter-text">Has hecho clic <span id="counter">0</span> veces.</p>
-        <button id="btn-click" class="btn">Haz clic aquí</button>
+    <!-- MAIN -->
+    <main>
+
+      <!-- Fila de tarjetas: contador y mensaje -->
+      <div class="row g-3 mb-4">
+        <!-- Contador -->
+        <div class="col-12 col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5 mb-3">Contador básico</h2>
+              <p id="counter-text" class="mb-3">
+                Has hecho clic <span id="counter" class="fw-semibold">0</span> veces.
+              </p>
+              <button id="btn-click" class="btn btn-primary">
+                Haz clic aquí
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cambiar mensaje -->
+        <div class="col-12 col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h2 class="h5 mb-3">Cambiar mensaje</h2>
+              <p id="message" class="mb-3">
+                Este texto se puede cambiar con JavaScript.
+              </p>
+              <button id="btn-message" class="btn btn-success">
+                Cambiar mensaje
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN DE IMÁGENES -->
+      <section class="mb-4">
+        <h2 class="h4 text-center mb-3">Imágenes de ejemplo</h2>
+
+        <div class="row g-3">
+          <!-- Imagen 1 -->
+          <div class="col-12 col-md-6">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://tse3.mm.bing.net/th/id/OIP.8x7f3Hs1LCZqkXK2I0vEPwHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3"
+                alt="Imagen de ejemplo 1"
+                class="card-img-top img-fluid"
+              >
+              <div class="card-body text-center">
+                <h3 class="h6 mb-2">Imagen 1</h3>
+                <p class="mb-0 text-muted">
+                  Imagen de prueba para practicar el layout con Bootstrap.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imagen 2 -->
+          <div class="col-12 col-md-6">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://tse1.mm.bing.net/th/id/OIP.gHXLbyOVA8Nu4Z44JjVjCgHaFj?rs=1&pid=ImgDetMain&o=7&rm=3"
+                alt="Imagen de ejemplo 2"
+                class="card-img-top img-fluid"
+              >
+              <div class="card-body text-center">
+                <h3 class="h6 mb-2">Imagen 2</h3>
+                <p class="mb-0 text-muted">
+                  En pantallas grandes se ve al lado de la otra; en móvil, una debajo de la otra.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- Columna derecha -->
-      <section class="card">
-        <h2>Cambiar mensaje</h2>
-        <p id="message">Este texto se puede cambiar con JavaScript.</p>
-        <button id="btn-message" class="btn btn-secondary">
-          Cambiar mensaje
-        </button>
-      </section>
     </main>
 
-    <!-- Sección de imágenes con flex -->
-    <section class="images-section">
-      <div class="image-card">
-        <h2>Imagen 1</h2>
-        <img
-          src="https://cdn.pixabay.com/photo/2024/02/22/05/40/natural-scenery-8589165_1280.jpg"
-          alt="Imagen de ejemplo 1"
-        >
-        <p>Esta es una imagen de prueba para practicar el layout con flex.</p>
-      </div>
-
-      <div class="image-card">
-        <h2>Imagen 2</h2>
-        <img
-          src="https://tse3.mm.bing.net/th/id/OIP.8x7f3Hs1LCZqkXK2I0vEPwHaFj?pid=ImgDet&w=474&h=355&rs=1&o=7&rm=3"
-          alt="Imagen de ejemplo 2"
-        >
-        <p>En pantallas grandes se ve al lado de la otra; en móvil, una debajo de la otra.</p>
-      </div>
-    </section>
-
-    <footer class="app-footer">
-      <small>Proyecto de práctica · Creado por Gus</small>
+    <!-- FOOTER -->
+    <footer class="mt-4 pt-3 border-top text-center text-muted small app-footer">
+      Proyecto de práctica · Creado por Carlos y Gus
     </footer>
   </div>
 
-  <!-- Vinculamos el JS -->
+  <!-- Bootstrap JS (bundle) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Tu script -->
   <script src="/assets/js/script.js"></script>
 </body>
 </html>

@@ -1,127 +1,30 @@
-/* ===== Reset ===== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* ===== Base ===== */
+/* Fondo general */
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background-color: #f5f5f5;
-  color: #222;
 }
 
-.app {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1.5rem;
+/* Asegurar que el contenido principal tenga buena altura */
+.main-wrapper {
+  min-height: calc(100vh - 56px); /* 56px aprox alto navbar */
 }
 
-/* ===== Header ===== */
-.app-header {
-  text-align: center;
-  margin-bottom: 2rem;
+/* Resaltar un poco el número del contador */
+#counter {
+  color: #0d6efd; /* Azul Bootstrap */
 }
 
-.subtitle {
-  color: #555;
+/* Animación suave de color en el mensaje */
+#message {
+  transition: color 0.2s ease;
 }
 
-/* ===== MAIN FLEX ===== */
-.app-main {
+#message.cambiado {
+  color: #198754; /* Verde Bootstrap */
+}
+
+/* Footer centrado con algo de aire */
+.app-footer {
   display: flex;
-  flex-direction: column; /* Móvil: columna */
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.card {
-  background: #fff;
-  padding: 1.2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-}
-
-/* ===== SECTION IMAGES FLEX ===== */
-.images-section {
-  display: flex;
-  flex-direction: column; /* Móvil: columna */
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.image-card {
-  background: #fff;
-  padding: 1.2rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-}
-
-.image-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* ===== BOTONES ===== */
-.btn {
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  border: none;
-  background-color: #007bff;
-  color: #fff;
-}
-.btn:hover {
-  background-color: #005fcc;
-}
-
-.btn-secondary {
-  background-color: #28a745;
-}
-.btn-secondary:hover {
-  background-color: #1e7e34;
-}
-
-/* ============================================================
-   MEDIA QUERIES — MOBILE FIRST (como tu ejemplo)
-   ============================================================ */
-
-/* 📱 → 📲 Breakpoint 768px */
-@media screen and (min-width: 768px) {
-
-  /* Ahora el layout pasa a filas como pusiste en tu ejemplo */
-  .app-main {
-    flex-direction: row;
-  }
-
-  .app-footer {
-  margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #777;
- }
-
-  .images-section {
-    flex-direction: row;
-  }
-
-  /* Ambas tarjetas comparten espacio */
-  .card,
-  .image-card {
-    flex: 1 1 0;
-  }
-}
-
-/* 📲 → 🖥️ Breakpoint 1024px */
-@media screen and (min-width: 1024px) {
-
-  /* Tu ejemplo exacto aplicado al proyecto */
-  h1 {
-    color: purple;
-  }
+  justify-content: center;
+  align-items: center;
 }
