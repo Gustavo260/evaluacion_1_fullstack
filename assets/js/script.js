@@ -2,7 +2,7 @@
 const btnClick = document.getElementById("btn-click");
 const counterSpan = document.getElementById("counter");
 
-// Número de clics
+// Numero de clics
 let counter = 0;
 
 btnClick.addEventListener("click", () => {
@@ -20,7 +20,7 @@ let isOriginal = true;
 
 btnMessage.addEventListener("click", () => {
   if (isOriginal) {
-    messageParagraph.textContent = "Mensaje cambiado con JavaScript 😏";
+    messageParagraph.textContent = "Mensaje cambiado con JavaScript";
     messageParagraph.classList.add("cambiado");
   } else {
     messageParagraph.textContent =
@@ -31,9 +31,7 @@ btnMessage.addEventListener("click", () => {
   isOriginal = !isOriginal;
 });
 
-// ...existing code...
-
-// Función para rotar imagen
+// Rotar imagen
 let rotacion = 0;
 
 function rotarImagen(boton) {
@@ -44,7 +42,7 @@ function rotarImagen(boton) {
     // Incrementar rotación en 90 grados
     rotacion += 90;
     
-    // Aplicar la transformación
+    // Aplicar la transformacion
     imagen.style.transition = 'transform 0.5s ease';
     imagen.style.transform = `rotate(${rotacion}deg)`;
 }
